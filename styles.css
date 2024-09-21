@@ -49,7 +49,7 @@ body, html {
     margin: 20px 0;
     object-fit: cover;
     border: 3px solid #dddddd; 
-    box-shadow: 2px 2px #6c6c6c;
+    box-shadow: 2px 2px #3b3b3b;
 }
 
 .social-icons a i {
@@ -59,7 +59,7 @@ body, html {
 } 
 
 .social-icons a:hover i {
-    color: black !important; 
+    color: rgb(129, 129, 129) !important; 
 
 }
 
@@ -70,22 +70,23 @@ body, html {
     margin-top: 20px;
     color: white;
     font-size: 1.5rem;
-    animation: swipe-up 1.5s infinite;
 }
+
+
 
 /* ---------- About me section ---------- */
 
 .about-me-section {
-    background-color: #f8f9fa; 
+    background-color: #f8f9fa; /* Light grey */
     padding: 60px 20px;
     text-align: center;
+    font-family: 'Raleway';
 }
 
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 30px;
-    font-family: 'Raleway';
 }
 
 .about-description {
@@ -94,7 +95,10 @@ body, html {
     max-width: 800px;
     margin: 0 auto;
     color: #333;
-    font-family: 'Raleway';
+}
+
+.text-content{
+    margin-right: 20px;
 }
 
 .about-image {
@@ -102,6 +106,7 @@ body, html {
     height: auto; 
     margin-left: 20px; 
     border-radius: 8px; 
+    flex-shrink: 0;
 }
 
 .about-links {
@@ -138,18 +143,20 @@ body, html {
 
 /* ---------- Skills section---------- */
 
-.skills, .projects {
-    padding: 30px 20px;
+.skills{
     min-height: auto;
-    background-color: #f8f9fa;
     font-family: 'Raleway';
+    padding-bottom: 50px;
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
     
 }
 
-.skills h2, .projects h2 {
+.skills h2{
     text-align: center;
     margin-bottom: 40px;
-    font-family: 'Raleway';
+    
     
 }
 
@@ -167,6 +174,7 @@ body, html {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
+    
 }
 
 .timeline-container {
@@ -175,6 +183,7 @@ body, html {
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 h2 {
@@ -186,7 +195,6 @@ h2 {
     font-family: 'Raleway';
 }
 
-/* Timeline */
 .timeline {
     position: relative;
     padding-left: 50px;
@@ -224,7 +232,7 @@ h2 {
     position: absolute;
     left: 0px;
     top: 0;
-    background-color: #007bff;
+    background-color: #40d2f7;
     color: white;
     border-radius: 50%;
     width: 30px;
@@ -249,8 +257,65 @@ h2 {
     margin-top: 5px;
 }
 
-/* Responsive for smaller screens */
+/* Cards styling */
+
+.projects {
+    background-color: #e9ecef; 
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Raleway';
+}
+
+.project-card {
+    transition: transform 0.2s ease-in-out;
+    
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+}
+
+/* ---------- Contact form section ---------- */
+.contact {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Raleway';
+    
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#formMessage {
+    display: none;
+    text-align: center;
+}
+
+.success-message {
+    color: green;
+    font-family: 'Raleway';
+}
+
+.error-message {
+    color: red;
+    font-family: 'Raleway';
+}
+
+/* -------- Smaller screen -------- */
 @media (max-width: 768px) {
+    .container.d-flex {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .about-image {
+        margin-left: 0;
+        margin-top: 20px; 
+    }
+
     .timeline-wrapper {
         flex-direction: column;
         align-items: center;
@@ -274,47 +339,9 @@ h2 {
     }
 }
 
-/* Cards styling */
-.project-card {
-    transition: transform 0.2s ease-in-out;
-    
-}
-
-.project-card:hover {
-    transform: scale(1.03);
-}
-
-.contact {
-    padding: 60px 20px;
-    background-color: #e9ecef;
-    font-family: 'Poppins';
-}
 
 
-/* ---------- Contact form section ---------- */
-.contact h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-#formMessage {
-    display: none;
-    text-align: center;
-}
-
-.success-message {
-    color: green;
-    font-family: 'Poppins';
-}
-
-.error-message {
-    color: red;
-    font-family: 'Poppins';
-}
-
-
-/*Fonts*/
-/* latin */
+/* --------Fonts -------- */
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
